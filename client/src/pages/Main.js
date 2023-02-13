@@ -10,6 +10,9 @@ import DrawerContext from ".././DrawerContext";
 import Header from "../components/Header/Header";
 import HeaderFilterSearch from "../components/HeaderFilterSearch/HeaderFilterSearch";
 import SignUp from "./SignUp/SignUp";
+import ProductsTable from "./Admin/ProductsTable";
+import ProductsEdit from "./Admin/ProductsEdit";
+import InsertProduct from "./Admin/InsertProduct";
 
 function Main() {
   const [cartOpen, setCartOpen] = useState(false);
@@ -38,6 +41,10 @@ function Main() {
           <Route path="/api/products/productDetail/:productId" element={<ProductDetail />} />
           <Route path="/query" element={<QueryUrl />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/admin/table" element={<ProductsTable />} />
+
+          <Route path="/admin/edit/:productId" element={<ProductsEdit />} />
+          <Route path="/admin/add" element={<InsertProduct /> } />
         </Routes>
         
 

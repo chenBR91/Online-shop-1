@@ -1,18 +1,18 @@
-import experss from "express"
+import express from "express"
 import productsServer from "../../data/productsServer.js"
 
-const router = experss.Router();
+const productsRouter = express.Router();
 
 
-router.get("/about", async (req, res) => {
+productsRouter.get("/about", async (req, res) => {
     res.send({ message: "Hello world" });
   });
   
-  router.get("/", async (req, res) => {
+  productsRouter.get("/", async (req, res) => {
     res.send({ data: productsServer });
   });
   
-  router.get("/product/:id", async (req, res) => {
+  productsRouter.get("/product/:id", async (req, res) => {
     console.log("id", req.params.id);
     try {
       const getProductDetail = productsServer.filter(
@@ -24,4 +24,4 @@ router.get("/about", async (req, res) => {
     }
   });
 
-export default router;
+export default productsRouter;

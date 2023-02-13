@@ -29,6 +29,7 @@ function Header() {
             <Link to="/" className='menu-link' style={{ marginLeft: '10px' }}>Products</Link>
             <Link to="/about" className='menu-link'>About</Link>
             <Link to="/query" className='menu-link'>Query</Link>
+            <Link to="/admin/table" className='menu-link'>Admin</Link>
           </Typography>
 
           <p>
